@@ -7,11 +7,11 @@ if (!defined('IN_DISCUZ')) {
 function echostr() {
 	global $_G;
 	$cache = $_G['cache']['plugin']['calendar'];
-	if ($cache['autoclose']) return '';
 	$starttime = date($cache['starttime']);
 	$endtime = date($cache['endtime']);
 	$now = time();
-	if ($now > strtotime($cache['starttime']) && $now < strtotime($cache['endtime'])) return <<<EOF
+	if ($now > strtotime($cache['endtime']) && $cache['autoclose']) return '';
+	else if ($now > strtotime($cache['starttime'])) return <<<EOF
 <div id="my_calendar">
 <table><tr><td>
 <span id="my_datename"><big>{$cache['title']}</big></span>

@@ -101,6 +101,9 @@ EOF;
 function mobilecssstr() {
 	return <<<EOF
 <style>
+#my_calendar table{
+	margin:auto;
+}
 #my_calendar td{
 	text-align:center;
 }

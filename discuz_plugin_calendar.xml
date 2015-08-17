@@ -2,7 +2,7 @@
 <root>
 	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
 	<item id="Version"><![CDATA[X3.2]]></item>
-	<item id="Time"><![CDATA[2015-08-10 18:42]]></item>
+	<item id="Time"><![CDATA[2015-08-18 03:04]]></item>
 	<item id="From"><![CDATA[Discuz! Board (http://localhost/)]]></item>
 	<item id="Data">
 		<item id="plugin">
@@ -52,7 +52,7 @@
 				<item id="description"><![CDATA[]]></item>
 				<item id="variable"><![CDATA[title]]></item>
 				<item id="type"><![CDATA[text]]></item>
-				<item id="value"><![CDATA[]]></item>
+				<item id="value"><![CDATA[七夕节]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="1">
@@ -61,7 +61,7 @@
 				<item id="description"><![CDATA[]]></item>
 				<item id="variable"><![CDATA[starttime]]></item>
 				<item id="type"><![CDATA[datetime]]></item>
-				<item id="value"><![CDATA[]]></item>
+				<item id="value"><![CDATA[2015-08-18 00:00]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="2">
@@ -70,7 +70,16 @@
 				<item id="description"><![CDATA[]]></item>
 				<item id="variable"><![CDATA[endtime]]></item>
 				<item id="type"><![CDATA[datetime]]></item>
-				<item id="value"><![CDATA[]]></item>
+				<item id="value"><![CDATA[2015-08-17 23:59]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[到期自动隐藏]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[autoclose]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 		</item>

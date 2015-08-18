@@ -7,11 +7,11 @@ if (!defined('IN_DISCUZ')) {
 function echostr() {
 	global $_G;
 	$cache = $_G['cache']['plugin']['calendar'];
-	$starttime = date($cache['starttime']);
-	$endtime = date($cache['endtime']);
+	$starttime = strtotime($cache['starttime']);
+	$endtime = strtotime($cache['endtime']);
 	$now = time();
-	if ($now > strtotime($cache['endtime']) && $cache['autoclose']) return '';
-	else if ($now > strtotime($cache['starttime'])) return <<<EOF
+	if ($now > $endtime && $cache['autoclose']) return '';
+	else if ($now > $starttime) return <<<EOF
 <div id="my_calendar">
 <table><tr><td>
 <span id="my_datename"><big>{$cache['title']}</big></span>
@@ -26,8 +26,8 @@ EOF;
 </td></tr></table>
 <script>
 (function(window){
-	var starttime=new Date("{$starttime}"),
-		endtime=new Date("{$endtime}"),
+	var starttime=new Date({$starttime}*1000),
+		endtime=new Date({$endtime}*1000),
 		infoSeperator=document.getElementById("mc_seperator");
 		infoDay=document.getElementById("mc_day");
 		infoHour=document.getElementById("mc_hour");

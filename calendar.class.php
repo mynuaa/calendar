@@ -11,17 +11,22 @@ function echostr() {
 	$endtime = strtotime($cache['endtime']);
 	$now = time();
 	if ($now > $endtime && $cache['autoclose']) return '';
-	else if ($now > $starttime) return <<<EOF
+	else if ($now > $starttime) {
+		if (isset($cache['url']) && $cache['url'] != '') {
+			$link = '<p class="my_datename" style="margin-top:0.2em"><a href="' . $cache['url'] . '">[点此进入]</a></p>';
+		}
+		return <<<EOF
 <div id="my_calendar">
 <table><tr><td>
-<span id="my_datename"><big>{$cache['title']}</big></span>
+<p class="my_datename"><big>{$cache['title']}</big></p>{$link}
 </td></tr></table>
 </div>
 EOF;
+	}
 	return <<<EOF
 <div id="my_calendar">
 <table><tr><td>
-<div>距离<span id="my_datename">{$cache['title']}</span><span id="mc_seperator">还有</span></div>
+<div>距离<span class="my_datename">{$cache['title']}</span><span id="mc_seperator">还有</span></div>
 <div id="my_time"><span id="mc_day">0</span>天<span id="mc_hour">0</span>时<span id="mc_min">0</span>分<span id="mc_sec">0</span>秒</div>
 </td></tr></table>
 <script>
@@ -78,7 +83,7 @@ function pccssstr() {
 	font-size:16px;
 	box-sizing:border-box;
 }
-#my_datename{
+.my_datename{
 	font-family:"楷体","SimKai","仿宋";
 	font-weight:bold;
 	margin:0 5px;
@@ -112,7 +117,7 @@ function mobilecssstr() {
 	font-size:14px;
 	display:inline-block;
 }
-#my_datename{
+.my_datename{
 	margin:0 4px;
 	font-weight:bold;
 }

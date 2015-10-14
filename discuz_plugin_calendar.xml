@@ -2,8 +2,8 @@
 <root>
 	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
 	<item id="Version"><![CDATA[X3.2]]></item>
-	<item id="Time"><![CDATA[2015-08-18 03:04]]></item>
-	<item id="From"><![CDATA[Discuz! Board (http://localhost/)]]></item>
+	<item id="Time"><![CDATA[2015-10-14 11:02]]></item>
+	<item id="From"><![CDATA[纸飞机南航青年网络社区 (http://my.nuaa.edu.cn/)]]></item>
 	<item id="Data">
 		<item id="plugin">
 			<item id="available"><![CDATA[1]]></item>
@@ -52,7 +52,7 @@
 				<item id="description"><![CDATA[]]></item>
 				<item id="variable"><![CDATA[title]]></item>
 				<item id="type"><![CDATA[text]]></item>
-				<item id="value"><![CDATA[七夕节]]></item>
+				<item id="value"><![CDATA[军训摄影大赛投票]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="1">
@@ -61,7 +61,7 @@
 				<item id="description"><![CDATA[]]></item>
 				<item id="variable"><![CDATA[starttime]]></item>
 				<item id="type"><![CDATA[datetime]]></item>
-				<item id="value"><![CDATA[2015-08-18 00:00]]></item>
+				<item id="value"><![CDATA[2015-10-13 00:00]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="2">
@@ -70,11 +70,20 @@
 				<item id="description"><![CDATA[]]></item>
 				<item id="variable"><![CDATA[endtime]]></item>
 				<item id="type"><![CDATA[datetime]]></item>
-				<item id="value"><![CDATA[2015-08-17 23:59]]></item>
+				<item id="value"><![CDATA[2015-10-20 23:59]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="3">
 				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[链接]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[url]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[4]]></item>
 				<item id="title"><![CDATA[到期自动隐藏]]></item>
 				<item id="description"><![CDATA[]]></item>
 				<item id="variable"><![CDATA[autoclose]]></item>

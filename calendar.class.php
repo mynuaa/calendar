@@ -33,15 +33,15 @@ EOF;
 			<div>天</div>
 		</td>
 		<td id="td_hour">
-			<div id="mc_hour">0</div>
+			<div id="mc_hour">00</div>
 			<div>时</div>
 		</td>
 		<td id="td_min">
-			<div id="mc_min">0</div>
+			<div id="mc_min">00</div>
 			<div>分</div>
 		</td>
 		<td id="td_sec">
-			<div id="mc_sec">0</div>
+			<div id="mc_sec">00</div>
 			<div>秒</div>
 		</td>
 	</tr>
@@ -59,11 +59,13 @@ EOF;
 		time=parseInt(time/1000);
 		infoDay.innerHTML=parseInt(time/86400);
 		time=parseInt(time%86400);
-		infoHour.innerHTML=parseInt(time/3600);
+		t=parseInt(time/3600);
+		infoHour.innerHTML=(t<10?'0'+t:t);
 		time=parseInt(time%3600);
-		infoMin.innerHTML=parseInt(time/60);
-		time=parseInt(time%60);
-		infoSec.innerHTML=time;
+		t=parseInt(time/60);
+		infoMin.innerHTML=(t<10?'0'+t:t);
+		t=parseInt(time%60);
+		infoSec.innerHTML=(t<10?'0'+t:t);
 	}
 	function calcTime(){
 		var now=new Date();
@@ -84,57 +86,6 @@ EOF;
 })(window);
 </script>
 </div>
-EOF;
-}
-function pccssstr() {
-	return <<<EOF
-<style>
-#my_calendar{
-	position:absolute;
-	top:-13px;
-	line-height:1.2em;
-	text-align:center;
-	font-size:16px;
-	box-sizing:border-box;
-}
-#tb_header{
-	background: #FFF;
-	font-size:0.8em;
-	color:rgb(188, 188, 185);
-	padding:4px 8px 0;
-}
-.my_datename{
-	font-family:"微软雅黑","SimKai","仿宋";
-	margin:0 5px;
-	color:black;
-}
-#my_calendar table{
-	width:100%;
-	height:100%;
-}
-#my_time span{
-	font-weight:bold;
-	font-family:"Consolas","Courier New","Lucida Console";
-	display:inline-block;
-	width:2em;
-}
-#mytime{
-	margin:5px 0 5px;
-}
-#mc_day, #mc_hour, #mc_min, #mc_sec{
-	display:inline-block;
-	margin-bottom:10px;
-}
-#td_day, #td_hour, #td_min, #td_sec{
-	background: rgb(53,92,125);
-	height:72px;
-	width:62px;
-	color:white;
-}
-#td_day, #td_hour, #td_min{
-	border-right: 1px solid gray;
-}
-</style>
 EOF;
 }
 function mobilecssstr() {
@@ -162,7 +113,7 @@ EOF;
 }
 class plugin_calendar {
 	function global_calendar() {
-		return pccssstr() . echostr();
+		return echostr();
 	}
 }
 class mobileplugin_calendar {

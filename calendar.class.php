@@ -91,7 +91,7 @@ function pccssstr() {
 <style>
 #my_calendar{
 	position:absolute;
-	top:80px;
+	top:-13px;
 	line-height:1.2em;
 	text-align:center;
 	font-size:16px;
